@@ -1,0 +1,205 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --line-clamp: 3;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #262626;
+  background-color: #e5e5e5;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+.site-layout {
+  margin: 0 auto;
+  max-width: 87rem;
+  height: 20px;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.decor-header {
+  height: 10rem;
+  /* background-color: #1e3a8a; */
+  background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246))
+    rgb(255, 255, 255) !important;
+  position: absolute;
+  inset: 0;
+}
+
+.token-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.token-img {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.news__item {
+  --item-border-radius: 2rem;
+  color: #262626;
+  text-decoration: none;
+  background-color: #cdc6bd8d;
+  border-radius: var(--item-border-radius);
+  box-shadow: 0 0 10px 0 rgb(114, 111, 111);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.news__item:hover {
+  box-shadow: 0 0 17px 0 rgb(114, 111, 111);
+}
+
+.news__item-title {
+  font-size: 1.125rem;
+}
+
+.news__item-image {
+  height: 10rem;
+  overflow: hidden;
+  border-top-left-radius: var(--item-border-radius);
+  border-top-right-radius: var(--item-border-radius);
+}
+
+.news__item-content {
+  padding: 1rem;
+}
+
+.line-clamp {
+  margin: 0 0 1em 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp);
+  -webkit-box-orient: vertical;
+}
+
+/* crypto prices section */
+
+.crypto-prices {
+  position: relative;
+  background-color: #f5f5f4;
+  box-shadow: 0 0 10px 0 rgb(155, 152, 152);
+  border-radius: 10px;
+  display: table;
+  gap: 1rem;
+  margin-top: 5rem;
+  font-size: 1.25rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.crypto-prices tbody tr,
+.crypto-prices thead tr {
+  border-bottom: 1px solid gray; /* Add bottom border to rows */
+}
+
+.crypto-prices__item {
+  border-bottom: 1px solid gray;
+  position: relative;
+  padding: 0.5rem;
+  /* font-weight: 500; */
+  padding-bottom: 1rem;
+}
+
+.crypto-prices th {
+  width: auto; /* Set width to auto for header cells */
+}
+
+.crypto-prices th,
+.crypto-prices td {
+  /* width: 100px; Adjust width for data cells as needed */
+  padding: 1rem;
+}
+
+.crypto-prices__item:last-of-type {
+  border-bottom: none;
+}
+
+.color-pulse-green {
+  animation: colorPulseGreen 2s forwards;
+}
+
+.color-pulse-red {
+  animation: colorPulseRed 2s forwards;
+}
+
+@keyframes colorPulseRed {
+  0% {
+    background-color: currentBackgroundColor;
+  }
+
+  30% {
+    background-color: #fca5a5;
+  }
+
+  70% {
+    background-color: #fca5a5;
+  }
+
+  100% {
+    background-color: currentBackgroundColor;
+  }
+}
+
+@keyframes colorPulseGreen {
+  0% {
+    background-color: currentBackgroundColor;
+  }
+
+  30% {
+    background-color: #86efac;
+  }
+
+  70% {
+    background-color: #86efac;
+  }
+
+  100% {
+    background-color: currentBackgroundColor;
+  }
+}
