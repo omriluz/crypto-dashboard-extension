@@ -42,12 +42,6 @@ window.addEventListener('beforeunload', () => {
 });
 
 
-
-myTest.addEventListener('click', () => {
-    chrome.storage.local.clear()
-})
-
-
 function renderCryptoPrices(res) {
     console.log('Rendering crypto prices...', res);
     const { data } = res || {}
@@ -106,7 +100,7 @@ function renderNews(res) {
         newsItem.target = "_blank";
         newsItem.innerHTML = `
             <div class="news__item-image">
-                <img src="${urlToImage}" alt="${title}">
+                <img src="${urlToImage || './placeholder-img.jpg'}" alt="${title}">
             </div>
             <div class="news__item-content">
                 <h3 class="news__item-title line-clamp" style="--line-clamp:2">${title}</h3>
